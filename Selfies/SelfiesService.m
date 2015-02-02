@@ -66,15 +66,11 @@
                             }  dispatch_sync(dispatch_get_main_queue(), ^{
                                 
                                  typeof(self) strongSelf = weakSelf;
-                               
-
-                            if (strongSelf.delegate) {
-                                
-                                if ([strongSelf respondsToSelector:@selector(returnedResults:)]) {
+                            
+                                if ([strongSelf.delegate respondsToSelector:@selector(returnedResults:)]) {
                                 
                                 [strongSelf.delegate returnedResults:imageReturnArray];
                                     
-                                }
                             }
                                     });
                             
